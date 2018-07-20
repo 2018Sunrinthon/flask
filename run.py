@@ -89,9 +89,9 @@ def init_report():
     rows = [(i[0], i[1], i[2], i[3], i[4]) for i in cur.execute("select * from board")]
     print(rows)
     conn.close()
-    if session['username']:
+    try:
         username = session['username']
-    else:
+    except:
         username = None
     return render_template("board_list.html", data = rows, username = username)
 
