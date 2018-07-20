@@ -89,7 +89,11 @@ def init_report():
     rows = [(i[0], i[1], i[2], i[3], i[4]) for i in cur.execute("select * from board")]
     print(rows)
     conn.close()
-    return render_template("board_list.html", data = rows, username = session['username'])
+    if session['username']:
+        username = session['username']
+    else:
+        username = None
+    return render_template("board_list.html", data = rows, username = username)
 
 @app.route("/board/<num>")
 def board(num):
