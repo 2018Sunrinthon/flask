@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/static/images/'
+UPLOAD_FOLDER = 'static/images/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'hahaha'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -125,7 +125,7 @@ def init_write():
     if session.get('logged_in') ==  True:
         return render_template("write.html", username = session['username'])
     else:
-        return ren
+        return render_template("login.html")
 
 @app.route("/write", methods=["POST"])
 def write():
@@ -133,7 +133,6 @@ def write():
     content = request.form['content']
 
     file = request.files['file_data']
-    filename = ""
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
