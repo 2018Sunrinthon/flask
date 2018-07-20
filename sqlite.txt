@@ -8,5 +8,6 @@ sqlite> create table board(
    ...> username varchar(20) NOT NULL,
    ...> title varchar(30) NOT NULL,
    ...> content text,
-   ...> updown integer default 0);
+   ...> updown integer default 0,
+   ...> img_name text);
 

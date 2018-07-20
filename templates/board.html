@@ -3,15 +3,45 @@
     <head>
         <meta charset="utf-8">
         <title>board</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="https://v40.pingendo.com/assets/4.0.0/default/theme.css" type="text/css"> </head>
     </head>
     <body>
-        {{ idx }}
-        {{ title }}
-        {{ content }}
-        {{ count }}
+            <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+                    <div class="container">
+                      <a class="navbar-brand" href="/board">
+                        <i class="fa d-inline fa-lg fa-cloud"></i>
+                        <b>&nbsp;게시판</b>
+                      </a>
+                        {% if username == None %}
+                            <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+                                <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/register">
+                                    Sign in</a>
+                                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/login">
+                                        Login</a>
+                            </div>
+                        {% else %}
+                        <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+                                <a class="btn navbar-btn ml-2 text-white btn-secondary">
+                                        {{username}}
+                                </a>
+                                <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/logout">
+                                    Logout</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                  </nav>
+                  <br><br>
+        <div class="text-center">
+            <img class="rounded" src="/static/images/{{ img_name }}" width="200px">
+        </div>
+        <p>idx : {{ idx }}</p>
+        <p>title : {{ title }}</p>
+        <p>content : {{ content }}</p>
+        <p>Like count : {{ count }}</p>
         <form action="{{ url_for('updown', idx=idx) }}" method="post">
-            <input name="submit" type="submit" value="submit">
+            <input name="submit" class="btn btn-primary" type="submit" value="Like">
         </form>
     </body>
 </html>
