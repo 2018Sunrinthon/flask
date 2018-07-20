@@ -1,0 +1,12 @@
+sqlite> create table user(
+   ...> ID varchar(20) NOT NULL,
+   ...> password varchar(30) NOT NULL,
+   ...> username varchar(20) NOT NULL);
+
+sqlite> create table board(
+   ...> idx integer Primary key,
+   ...> username varchar(20) NOT NULL,
+   ...> title varchar(30) NOT NULL,
+   ...> content text,
+   ...> updown integer default 0);
+

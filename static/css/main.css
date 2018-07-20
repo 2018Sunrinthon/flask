@@ -1,0 +1,115 @@
+.Layer 
+{
+     width: 1920px;
+     height: 1080px;
+   background-color: #1f2124;
+}
+
+.logo 
+{
+  width: 203px;
+  height: 203px;
+  mix-blend-mode: undefined;
+  position: relative;
+  top:188px;
+  left:759px;
+}
+
+.main_text
+{
+   font-family: TTManbalchungchunR;
+   text-align: center;
+   color: #edbb16;
+   font-size: 102px;
+}
+
+.sub_text
+{
+   font-family: NotoSansCJKkr;
+   font-size:17px;
+   color: #edbb16;
+}
+
+.ID_PW_btn
+{
+   width: 565px;
+     height: 49px;
+    mix-blend-mode: undefined;
+     border-radius: 10px;
+     background-color: #f9e15c;
+     border: solid 0 #000000;
+     font-size:21px;
+   font-family:"Arial";
+}
+
+.Signup_btn
+{
+    font-family: NotoSansCJKkr;
+    font-size:17px;
+    color:#1992b5;
+}
+
+.login_btn {
+  width: 126px;
+  height: 116px;
+  mix-blend-mode: undefined;
+  border-radius: 20px;
+  background-color: #edbb16;
+  border: solid 0 #000000;
+  box-shadow: 5px 5px 5px 5px #c99e0e;
+  font-size:29px;
+  font-family:"GoyangDeogyang";
+}
+
+.signup_maintext
+{
+   font-size: 75px;
+   font-family: GoyangDeogyang;
+   color: #ffffff;
+}
+
+.signup_subtext
+{
+   font-size: 43px;
+   color: #ffffff;
+   font-family: GoyangDeogyang;
+}
+
+.join_btn
+{
+   width: 116px;
+     height: 51px;
+    mix-blend-mode: undefined;
+     border-radius: 10px;
+     background-color: #f9e15c;
+     border: solid 0 #000000;
+     font-size:31.5px;
+   font-family:"GoyangDeogyang";
+}
+
+.Statistical_text
+{
+   font-size:29px;
+   color:#ffffff;
+   font-family: GoyangDeogyang;
+}
+
+.userinfo
+{
+   font-family: NotoSansCJKkr;
+   font-size:29px;
+   color: #ffffff;
+}
+
+.logout_btn
+{
+   width: 121px;
+    height: 53px;
+     mix-blend-mode: undefined;
+    border-radius: 20px;
+     background-color: #edbb16;
+    border: solid 0 #000000;
+    box-shadow: 3px 3px 3px 3px #c99e0e;
+    font-size:23px;
+    font-family:NanumSquareRoundR;
+}
